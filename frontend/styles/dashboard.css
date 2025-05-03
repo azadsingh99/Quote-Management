@@ -1,0 +1,238 @@
+/* Advanced, modern dashboard styling for Saved Quotes app */
+
+.dashboard-bg {
+  min-height: 100vh;
+  background: #f6f8fa;
+  padding: 2rem 1rem;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.dashboard-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.12);
+  padding: 2.5rem;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dashboard-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1877f2;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.dashboard-logout {
+  background: #e53935;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 2px 8px 0 rgba(229, 57, 53, 0.12);
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.dashboard-logout:hover {
+  background: #b71c1c;
+}
+
+.dashboard-create {
+  background: #1877f2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px 0 rgba(24, 119, 242, 0.08);
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.dashboard-create:hover {
+  background: #155db2;
+  box-shadow: 0 4px 16px 0 rgba(24, 119, 242, 0.16);
+}
+
+.dashboard-table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  min-width: 650px;
+}
+.dashboard-table th, .dashboard-table td {
+  padding: 1rem 1.2rem;
+  text-align: left;
+}
+.dashboard-table th {
+  background: #f5f5f5;
+  font-weight: 600;
+  font-size: 1.05rem;
+  white-space: nowrap;
+}
+.dashboard-table tr {
+  border-bottom: 1px solid #eee;
+  transition: background 0.15s;
+}
+.dashboard-table tr:last-child {
+  border-bottom: none;
+}
+.dashboard-table tr:hover {
+  background: #f0f6ff;
+}
+.dashboard-table .status-active {
+  color: #388e3c;
+  font-weight: bold;
+}
+.dashboard-table .status-expired {
+  color: #d32f2f;
+  font-weight: bold;
+}
+.dashboard-table .action-btn {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.18s;
+  box-shadow: 0 1px 4px 0 rgba(24, 119, 242, 0.06);
+  display: inline-block;
+}
+.dashboard-table .edit-btn {
+  background: #fffde7;
+  color: #f9a825;
+}
+.dashboard-table .edit-btn:hover {
+  background: #fff8c6;
+}
+.dashboard-table .delete-btn {
+  background: #ffebee;
+  color: #e53935;
+}
+.dashboard-table .delete-btn:hover {
+  background: #ffcdd2;
+}
+.dashboard-table .extend-btn {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+.dashboard-table .extend-btn:hover {
+  background: #bbdefb;
+}
+.dashboard-table .history-btn {
+  background: #f5f5f5;
+  color: #333;
+}
+.dashboard-table .history-btn:hover {
+  background: #e0e0e0;
+}
+
+/* Modal Styles */
+.dashboard-modal-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  overflow-y: auto;
+}
+.dashboard-modal-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2.5rem 2rem 2rem 2rem;
+  min-width: 350px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 24px 0 rgba(24, 119, 242, 0.16);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.dashboard-modal-close {
+  width: 100%;
+  margin-top: 1.5rem;
+  background: #f5f5f5;
+  color: #222;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.dashboard-modal-close:hover {
+  background: #e0e0e0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .dashboard-card {
+    padding: 1.5rem;
+  }
+  
+  .dashboard-title {
+    font-size: 1.8rem;
+  }
+  
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .dashboard-logout {
+    padding: 0.6rem 1.8rem;
+    font-size: 1rem;
+  }
+  
+  .dashboard-create {
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  .dashboard-table td {
+    padding: 0.8rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-card {
+    padding: 1.2rem;
+    border-radius: 15px;
+  }
+  
+  .dashboard-modal-card {
+    padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  }
+}

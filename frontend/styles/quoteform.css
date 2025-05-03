@@ -1,0 +1,141 @@
+/* Advanced, attractive, modern styles for the Quote Form modal and buttons */
+
+.quoteform-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.quoteform-label {
+  font-size: 1.12rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #222;
+}
+
+.quoteform-input, .quoteform-textarea {
+  border: 1.5px solid #d1d5db;
+  border-radius: 7px;
+  padding: 0.7rem 1.1rem;
+  font-size: 1.08rem;
+  outline: none;
+  transition: border 0.18s, box-shadow 0.18s;
+  margin-bottom: 0.7rem;
+  background: #fafbfc;
+  width: 100%;
+}
+.quoteform-input:focus, .quoteform-textarea:focus {
+  border-color: #1877f2;
+  box-shadow: 0 0 0 2px #e3f0ff;
+}
+
+.quoteform-row {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.quoteform-field {
+  flex: 1;
+  min-width: 200px;
+}
+
+.quoteform-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-right: 0.7rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(24, 119, 242, 0.09);
+  transition: background 0.18s, box-shadow 0.18s, color 0.18s;
+  background: #1877f2;
+  color: #fff;
+}
+.quoteform-btn:hover, .quoteform-btn:focus {
+  background: #0f5bb5;
+  color: #fff;
+  box-shadow: 0 4px 16px 0 rgba(24, 119, 242, 0.18);
+}
+
+.quoteform-btn.secondary {
+  background: #f5f5f5;
+  color: #222;
+  box-shadow: none;
+}
+.quoteform-btn.secondary:hover, .quoteform-btn.secondary:focus {
+  background: #e0e0e0;
+  color: #111;
+}
+
+.quoteform-btn.danger {
+  background: #e53935;
+  color: #fff;
+}
+.quoteform-btn.danger:hover, .quoteform-btn.danger:focus {
+  background: #b71c1c;
+  color: #fff;
+}
+
+.quoteform-btn.add {
+  background: #43a047;
+  color: #fff;
+}
+.quoteform-btn.add:hover, .quoteform-btn.add:focus {
+  background: #2e7031;
+  color: #fff;
+}
+
+.quoteform-btn:disabled {
+  background: #e0e0e0;
+  color: #aaa;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.quoteform-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.quoteform-actions {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .quoteform-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .quoteform-btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  .quoteform-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .quoteform-label {
+    font-size: 1rem;
+  }
+  
+  .quoteform-input, .quoteform-textarea {
+    padding: 0.6rem 0.9rem;
+    font-size: 1rem;
+  }
+}
